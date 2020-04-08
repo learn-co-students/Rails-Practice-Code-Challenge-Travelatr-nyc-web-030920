@@ -1,0 +1,21 @@
+<h1>Make Blogger</h1>
+
+<% if flash[:messages]%>
+  <% flash[:messages].each do |message| %> <br>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<%= form_for @blogger do |b|%>
+    <%= b.label :name %>
+    <%= b.text_field :name%> <br>
+
+    <%= b.label :age %>
+    <%= b.number_field :age %> <br>
+
+    <%= b.label :bio %>
+    <%= b.text_field :bio%> <br>
+
+    <%= b.submit %>
+
+<% end %>
