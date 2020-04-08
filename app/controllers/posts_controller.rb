@@ -1,5 +1,15 @@
 class PostsController < ApplicationController
 
-    #return the number of likes
+    def new
+        @post = Post.new
+    end
+
+    def create
+        
+    end
+
+    def edit
+
+    end
     
 end
