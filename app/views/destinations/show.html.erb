@@ -1,0 +1,32 @@
+<h1><%= @destination.name %>'s Show Page</h1>
+
+<h3><%= @destination.name %>'s Featured Post</h3>
+<% most_liked = Post.all.sort_by{|p| -p.likes}%>
+
+
+<h4><%=link_to "#{most_liked.first.title}", post_path(most_liked.first)%></h4>
+
+
+<h3><%= @destination.name %> 5 Most Recent Posts:</h3>
+<%last_five =  @destination.posts.last(5)%>
+<% last_five.each do |p|%>
+    <p>Post Title: <%= p.title  %></p>
+<%end%>
+
+    <%@total = 0%>
+<% @destination.bloggers.each do |b| %>
+    <%@total += b.age%>
+<%end%>
+    <%num_of_bloggers = @destination.bloggers.length %>
+    <%average = @total/num_of_bloggers%>
+    <p>Average age Bloggers: <%= average %> </p>
+
+    
+
+
+
+
+
+
+
+
