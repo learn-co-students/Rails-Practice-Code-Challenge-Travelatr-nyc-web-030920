@@ -1,0 +1,17 @@
+<h1><%= @destination.name%></h1>
+<h2><%=@destination.country%></h2>
+
+<h1>Recent Posts</h1>
+
+<%post_reverse= @destination.posts.reverse()%>
+<%@post= Post.order("created_at")%>
+<ol>
+<%5.times do |i|%>
+<li>
+<%= link_to @post[-(i+1)].title, post_path(@post[-(i+1)])%>
+</li>
+</ol>
+<%end%>
+
+
+
