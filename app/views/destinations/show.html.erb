@@ -1,0 +1,18 @@
+<h1> <%= @destination.name %> </h1>
+<h2> <%= @destination.country %> </h2>
+
+<% if !@destination.posts.empty? %>
+Average Blogger Age: <%= @destination.avg_age %><br>
+Featured Post: <%= link_to @destination.featured_post.title, @destination.featured_post%><br>
+
+    Recent Posts:
+    <% @destination.posts.order(:id).each do |p| %><br>
+    <%= link_to p.title, p %>
+    <% end %>
+    <% else %>
+    No Posts Written
+
+<% end %>
+
+
+

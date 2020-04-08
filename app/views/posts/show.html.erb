@@ -1,0 +1,7 @@
+<h1> <%= @post.title %></h1>
+<h2> <%= link_to @post.destination.name, @post.destination%></h2>
+Likes: <%= @post.likes %><br>
+Content: <%= @post.content %><br>
+Post Author: <%= link_to @post.blogger.name, @post.blogger%><br>
+<%= button_to "Like", add_like_path(@post)%>
+
