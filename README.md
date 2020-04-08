@@ -29,16 +29,16 @@ Blogger:
 Destination:
 
 1. Users should be able to see a destination profile page. On this page, a user should see:
-	- The most recent 5 posts written about this destination
+	<!-- - The most recent 5 posts written about this destination
 	- A link to a featured post (this destination's post with the most likes)
-	- The average age of all unique bloggers who have written about this destination.
+	- The average age of all unique bloggers who have written about this destination. -->
 
 Post:
 
 1. Users should be able to create and edit a post
-	- Users should be able to select a blogger from a dropdown menu
-	- Users should be able to select a destination from a dropdown menu
-	- A post should have a title
+	<!-- - Users should be able to select a blogger from a dropdown menu -->
+	<!-- - Users should be able to select a destination from a dropdown menu -->
+	<!-- - A post should have a title -->
 	- A post should have content longer than 100 characters
 2. Users should be able to see a post's page with its title and content displayed. On this page, a user should see:
 	- A link to the page of that post's author
