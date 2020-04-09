@@ -1,0 +1,12 @@
+SHOW PAGE
+<h1><%= @blogger.name%>  </h1>
+
+<%sorted = @blogger.posts.sort_by{|p| -p.likes}%>
+<h3><%= @blogger.name %>'s Featured Post</h3>
+<h4><%=link_to "#{sorted.first.title}", post_path(sorted.first)%></h4>
+
+<% sorted.each do |p|%>
+    <p>Title: <%= p.title %></p>
+    <p># of Likes: <%= p.likes %></p> <br>
+<%end%>
+
