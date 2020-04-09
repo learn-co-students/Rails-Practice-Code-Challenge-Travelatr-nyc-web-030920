@@ -1,5 +1,8 @@
 class BloggersController < ApplicationController
-  
+  def index
+    @bloggers= Blogger.all
+  end
+
   def show
     @blogger = Blogger.find(params[:id])
   end
@@ -13,7 +16,7 @@ class BloggersController < ApplicationController
     @blogger.save
 
     flash[:messages] = @blogger.errors.full_messages
-    if @blogger.valid? 
+    if @blogger.valid?       
       redirect_to blogger_path(@blogger)
     else
       redirect_to new_blogger_path
