@@ -1,0 +1,18 @@
+<h1> Add a Blogger!</h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |e| %><br>
+    <%= e %>
+    <% end %>
+<% end %>
+
+<%= form_for @blogger do |b| %>
+<%= b.label :name %>
+<%= b.text_field :name%><br>
+<%= b.label :age %>
+<%= b.number_field :age%><br>
+<%= b.label :bio %>
+<%= b.text_area :bio%><br>
+<%= b.submit %>
+
+<% end %>

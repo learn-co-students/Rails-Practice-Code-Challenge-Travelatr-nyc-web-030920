@@ -1,0 +1,15 @@
+<h1> <%= @blogger.name %> </h1><br>
+<%= @blogger.age %><br>
+<%= @blogger.bio%><b>
+<%# Total Likes: <%= @blogger.total_likes%><br>
+<br>
+Total Likes: <%= @blogger.total_likes%><br>
+
+Featured Post: <%= link_to @blogger.featured_post.title, @blogger.featured_post %><br>
+
+All Posts: <% @blogger.posts.each do |p| %><br>
+<%= p.title %>
+<%= p.likes %>
+<% end %>
+
+<%# Featured Post: <%= @blogger.posts.maximum("likes").title%>
